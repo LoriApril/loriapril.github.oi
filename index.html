@@ -2,216 +2,689 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lori April</title>
-  <meta name="description" content="Personal website of Lori April." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lori April Hand Crafted Goods</title>
+  <meta name="description" content="Modern-classic handcrafted goods—small-batch, nature-inspired, consciously made." />
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --card: #f9fafb;
-      --border: #e5e7eb;
-      --link: #111827;
+    :root{
+      --bg: #fbfaf6;          /* warm bone */
+      --paper: #ffffff;
+      --ink: #1b1b16;         /* soft black */
+      --muted: #5f6458;       /* moss-gray */
+      --line: #e6e2d7;        /* sand line */
+      --accent: #3e5a3b;      /* evergreen */
+      --accent2:#a67c52;      /* clay */
+      --shadow: 0 16px 50px rgba(27,27,22,.08);
+      --radius: 18px;
+      --radius2: 24px;
+      --max: 1120px;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .wrap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 56px 20px 80px;
-    }
-    header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 16px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 28px;
-    }
-    .brand {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 14px;
-      font-weight: 600;
-      font-size: 14px;
-    }
-    nav a:hover { color: var(--text); text-decoration: underline; }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 18px;
-      align-items: start;
-      margin: 22px 0 26px;
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.55;
+      letter-spacing: .01em;
     }
-    .hero h1 {
-      font-size: 44px;
-      line-height: 1.1;
-      margin: 0 0 12px;
-      letter-spacing: -0.03em;
+
+    a{ color:inherit; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding: 20px; }
+
+    /* Header */
+    header{
+      position: sticky;
+      top:0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom: 1px solid var(--line);
     }
-    .hero p {
-      margin: 0;
-      color: var(--muted);
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding: 14px 20px;
+      max-width: var(--max);
+      margin:0 auto;
+    }
+    .brand{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      text-decoration:none;
+    }
+    .brand strong{
       font-size: 18px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
     }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
+    .brand span{
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
-    .card h2 {
-      margin: 0 0 8px;
-      font-size: 16px;
+    nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
     }
-    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+    nav a{
+      text-decoration:none;
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    nav a:hover{ color: var(--ink); text-decoration: underline; text-underline-offset: 6px; }
+    .icons{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .iconbtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:40px; height:40px;
+      border:1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      box-shadow: 0 8px 22px rgba(27,27,22,.06);
+      text-decoration:none;
+    }
+    .iconbtn:hover{ border-color: color-mix(in srgb, var(--accent) 25%, var(--line)); }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 18px;
+    /* Buttons */
+    .btnrow{ display:flex; gap:12px; flex-wrap:wrap; margin-top: 18px; }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 750;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 12px;
+      text-decoration:none;
+      border:1px solid var(--line);
+      background: var(--paper);
     }
-    .tile {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      transition: transform 120ms ease, box-shadow 120ms ease;
-      text-decoration: none;
-      color: inherit;
+    .btn.primary{
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 18px 40px rgba(62,90,59,.22);
     }
-    .tile:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
-    }
-    .tile h3 { margin: 0 0 8px; font-size: 16px; }
-    .tile p { margin: 0; color: var(--muted); font-size: 14px; }
+    .btn.primary:hover{ filter: brightness(.98); }
+    .btn.ghost:hover{ border-color: color-mix(in srgb, var(--accent) 25%, var(--line)); }
 
-    .links {
+    /* Hero */
+    .hero{
       margin-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border:1px solid var(--line);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      min-height: 520px;
+    }
+    .heroCopy{
+      padding: 48px 44px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
       gap: 10px;
+      background:
+        radial-gradient(800px 300px at 10% 0%, rgba(166,124,82,.12), transparent 60%),
+        radial-gradient(700px 260px at 0% 100%, rgba(62,90,59,.10), transparent 55%),
+        linear-gradient(180deg, #fff, #fff);
     }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid var(--border);
+    .eyebrow{
+      color: var(--muted);
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    h1{
+      margin:0;
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height: 1.03;
+      letter-spacing: -.03em;
+    }
+    .sub{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 46ch;
+    }
+    .trust{
+      margin-top: 16px;
+      display:flex;
+      gap: 12px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(251,250,246,.9);
+    }
+    .heroImage{
+      position:relative;
+      background:
+        linear-gradient(0deg, rgba(27,27,22,.06), rgba(27,27,22,.06)),
+        url("https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=70");
+      background-size: cover;
+      background-position: center;
+    }
+    .heroBadge{
+      position:absolute;
+      bottom: 18px;
+      right: 18px;
+      background: rgba(255,255,255,.88);
+      border:1px solid var(--line);
       border-radius: 999px;
       padding: 10px 12px;
-      text-decoration: none;
-      color: var(--link);
-      font-weight: 650;
-      font-size: 14px;
-      background: #fff;
+      font-size: 12px;
+      color: var(--muted);
+      box-shadow: 0 12px 28px rgba(27,27,22,.10);
+      max-width: 260px;
     }
-    .pill:hover { text-decoration: underline; }
 
-    footer {
-      margin-top: 42px;
-      padding-top: 18px;
-      border-top: 1px solid var(--border);
+    /* Section */
+    .section{ margin-top: 34px; }
+    .sectionHead{
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: 18px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .sectionHead p{
+      margin:0;
       color: var(--muted);
       font-size: 13px;
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      max-width: 56ch;
     }
 
-    @media (max-width: 780px) {
-      .hero { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr; }
-      header { align-items: center; }
+    /* Collections */
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      background: var(--paper);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: 0 10px 30px rgba(27,27,22,.06);
+      text-decoration:none;
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .card:hover{ transform: translateY(-2px); box-shadow: 0 18px 50px rgba(27,27,22,.10); }
+    .cardImg{
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      border-bottom:1px solid var(--line);
+    }
+    .cardBody{ padding: 14px 14px 16px; }
+    .cardTitle{ font-weight: 820; margin:0; }
+    .cardDesc{ margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+
+    /* Products */
+    .products{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .product{
+      background: var(--paper);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      text-decoration:none;
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .product:hover{ transform: translateY(-2px); box-shadow: 0 18px 50px rgba(27,27,22,.10); }
+    .prodImg{
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-bottom:1px solid var(--line);
+    }
+    .prodBody{ padding: 12px 12px 14px; }
+    .prodTop{ display:flex; justify-content:space-between; gap:10px; }
+    .prodName{ margin:0; font-weight: 820; font-size: 14px; }
+    .price{ font-weight: 820; color: var(--accent); font-size: 14px; }
+    .prodMeta{ margin: 6px 0 10px; color: var(--muted); font-size: 12px; }
+    .quickAdd{
+      width:100%;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      padding: 10px 12px;
+      background: #fff;
+      font-weight: 780;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 11px;
+      cursor:pointer;
+    }
+    .quickAdd:hover{ border-color: color-mix(in srgb, var(--accent) 25%, var(--line)); }
+
+    /* Story split */
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .panel{
+      background: var(--paper);
+      border:1px solid var(--line);
+      border-radius: var(--radius2);
+      overflow:hidden;
+      box-shadow: 0 10px 30px rgba(27,27,22,.06);
+    }
+    .panelPad{ padding: 22px 20px; }
+    .kicker{
+      color: var(--muted);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 780;
+      font-size: 12px;
+    }
+    .storyTitle{ margin: 10px 0 10px; font-size: 28px; letter-spacing: -.02em; line-height: 1.1; }
+    .storyText{ margin:0; color: var(--muted); }
+    .panelImg{
+      background:
+        linear-gradient(0deg, rgba(27,27,22,.10), rgba(27,27,22,.10)),
+        url("https://images.unsplash.com/photo-1520975693411-b4c85d0f8311?auto=format&fit=crop&w=1600&q=70");
+      background-size: cover;
+      background-position: center;
+      min-height: 320px;
+    }
+
+    /* Pillars */
+    .pillars{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .pillar{
+      background: var(--paper);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+    .pillar strong{
+      display:block;
+      margin-bottom: 6px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .pillar span{ color: var(--muted); font-size: 13px; }
+
+    /* Newsletter */
+    .newsletter{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap:wrap;
+      padding: 18px;
+    }
+    .form{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      width: 100%;
+      max-width: 520px;
+    }
+    input{
+      flex: 1 1 220px;
+      padding: 12px 12px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: #fff;
+      font-size: 14px;
+      outline:none;
+    }
+    input:focus{ border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+    .submit{
+      padding: 12px 16px;
+      border-radius: 999px;
+      border:1px solid var(--accent);
+      background: var(--accent);
+      color:#fff;
+      font-weight: 820;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 12px;
+      cursor:pointer;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 42px;
+      padding: 26px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+    .foot{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 14px;
+    }
+    .foot h4{
+      margin: 0 0 10px;
+      color: var(--ink);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .foot a{
+      display:block;
+      text-decoration:none;
+      color: var(--muted);
+      padding: 4px 0;
+      font-size: 13px;
+    }
+    .foot a:hover{ text-decoration: underline; }
+    .tiny{ margin-top: 14px; font-size: 12px; color: var(--muted); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .heroImage{ min-height: 280px; }
+      .cards{ grid-template-columns: 1fr; }
+      .products{ grid-template-columns: 1fr 1fr; }
+      .split{ grid-template-columns: 1fr; }
+      .pillars{ grid-template-columns: 1fr 1fr; }
+      .foot{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px){
+      .products{ grid-template-columns: 1fr; }
+      .heroCopy{ padding: 28px 18px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">Lori April</div>
-      <nav>
+  <header>
+    <div class="topbar">
+      <a class="brand" href="#">
+        <strong>Lori April</strong>
+        <span>Hand Crafted Goods</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <a href="#shop">Shop</a>
         <a href="#about">About</a>
-        <a href="#now">Now</a>
+        <a href="#sustain">Sustainability</a>
+        <a href="#journal">Journal</a>
         <a href="#contact">Contact</a>
       </nav>
-    </header>
 
-    <section class="hero">
-      <div>
-        <h1>Hi — I’m Lori.</h1>
-        <p>
-          Welcome to my corner of the internet. I’m building this site as a simple home for my work,
-          notes, and the things I’m exploring.
-        </p>
+      <div class="icons" aria-label="Utility">
+        <a class="iconbtn" href="#search" title="Search" aria-label="Search">⌕</a>
+        <a class="iconbtn" href="#account" title="Account" aria-label="Account">⎋</a>
+        <a class="iconbtn" href="#cart" title="Cart" aria-label="Cart">👜</a>
+      </div>
+    </div>
+  </header>
 
-        <div class="links" id="contact" style="margin-top:16px;">
-          <a class="pill" href="mailto:loriapril01@yahoo.com">Email me</a>
-          <a class="pill" href="https://www.instagram.com/loriaprilthunberg/" target="_blank" rel="noopener">Instagram</a>
-      
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" aria-label="Featured">
+      <div class="heroGrid">
+        <div class="heroCopy">
+          <div class="eyebrow">Small-batch • Nature-inspired • Consciously made</div>
+          <h1>Quiet luxury, made by hand.</h1>
+          <p class="sub">
+            Lori April Hand Crafted Goods—modern-classic pieces for home, ritual, and gifting.
+            Thoughtfully sourced materials. Timeless forms. Minimal waste.
+          </p>
+
+          <div class="btnrow">
+            <a class="btn primary" href="#shop">Shop the Collection</a>
+            <a class="btn ghost" href="#about">Learn Our Process</a>
+          </div>
+
+          <div class="trust">
+            <div class="chip">✓ Natural materials</div>
+            <div class="chip">✓ Small-batch studio made</div>
+            <div class="chip">✓ Plastic-lite packaging</div>
+          </div>
+        </div>
+
+        <div class="heroImage" role="img" aria-label="Nature-inspired product styling photo">
+          <div class="heroBadge">
+            <strong style="color:var(--ink)">New:</strong>
+            Winter Studio Release — limited quantities, once they’re gone they’re gone.
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h2>Quick note</h2>
-        <p>
-          This site is brand new. I’ll be adding pages over time — starting simple and making it better as I go.
-        </p>
+    <!-- COLLECTIONS -->
+    <section class="section" id="shop">
+      <div class="sectionHead">
+        <h2>Shop by Collection</h2>
+        <p>Start with what you’re drawn to—home essentials, everyday carry, or elevated gifting.</p>
+      </div>
+
+      <div class="cards">
+        <a class="card" href="#collection-home">
+          <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="cardBody">
+            <p class="cardTitle">Home & Ritual</p>
+            <p class="cardDesc">Objects that soften the day—calm, grounded, essential.</p>
+          </div>
+        </a>
+
+        <a class="card" href="#collection-carry">
+          <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1520975599431-6d6a7d86c2f0?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="cardBody">
+            <p class="cardTitle">Carry</p>
+            <p class="cardDesc">Minimal forms, durable materials, built for everyday.</p>
+          </div>
+        </a>
+
+        <a class="card" href="#collection-gifts">
+          <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1549465220-1a8d2c019b9a?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="cardBody">
+            <p class="cardTitle">Gifting</p>
+            <p class="cardDesc">Considered bundles and heirloom-leaning keepsakes.</p>
+          </div>
+        </a>
       </div>
     </section>
 
-    <section class="grid">
-      <a class="tile" href="#about">
-        <h3>About</h3>
-        <p>A short intro and what I’m about.</p>
-      </a>
-      <a class="tile" href="#now">
-        <h3>Now</h3>
-        <p>What I’m focused on lately.</p>
-      </a>
-      <a class="tile" href="#contact">
-        <h3>Contact</h3>
-        <p>Best ways to reach me.</p>
-      </a>
+    <!-- BESTSELLERS -->
+    <section class="section" aria-label="Bestsellers">
+      <div class="sectionHead">
+        <h2>Bestsellers</h2>
+        <p>Customer favorites—simple silhouettes, premium feel, and made to last.</p>
+      </div>
+
+      <div class="products">
+        <article class="product">
+          <div class="prodImg" style="background-image:url('https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="prodBody">
+            <div class="prodTop">
+              <p class="prodName">Stoneware Pinch Bowl</p>
+              <div class="price">$34</div>
+            </div>
+            <div class="prodMeta">Hand-finished • Natural glaze</div>
+            <button class="quickAdd" type="button">Quick Add</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="prodImg" style="background-image:url('https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="prodBody">
+            <div class="prodTop">
+              <p class="prodName">Linen Kitchen Towel Set</p>
+              <div class="price">$42</div>
+            </div>
+            <div class="prodMeta">OEKO-TEX linen • Soft wash</div>
+            <button class="quickAdd" type="button">Quick Add</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="prodImg" style="background-image:url('https://images.unsplash.com/photo-1520975682030-1a8d2c019b9a?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="prodBody">
+            <div class="prodTop">
+              <p class="prodName">Canvas Everyday Tote</p>
+              <div class="price">$68</div>
+            </div>
+            <div class="prodMeta">Heavyweight canvas • Reinforced</div>
+            <button class="quickAdd" type="button">Quick Add</button>
+          </div>
+        </article>
+
+        <article class="product">
+          <div class="prodImg" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="prodBody">
+            <div class="prodTop">
+              <p class="prodName">Botanical Soap Trio</p>
+              <div class="price">$28</div>
+            </div>
+            <div class="prodMeta">Plant oils • Lightly scented</div>
+            <button class="quickAdd" type="button">Quick Add</button>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="about" style="margin-top:28px;">
-      <h2 style="margin:0 0 8px;">About</h2>
-      <p style="margin:0; color:var(--muted);">
-        Replace this with a couple sentences about you — what you do, what you love, and what you want this site to become.
-      </p>
+    <!-- STORY -->
+    <section class="section" id="about">
+      <div class="split">
+        <div class="panel">
+          <div class="panelPad">
+            <div class="kicker">The Studio</div>
+            <h3 class="storyTitle">Crafted slowly, designed to stay.</h3>
+            <p class="storyText">
+              Each piece is made in small batches with a focus on restraint: fewer, better materials;
+              timeless shapes; and packaging that respects the planet. We create goods that feel
+              elevated but grounded—quiet luxury you can live with.
+            </p>
+            <div class="btnrow">
+              <a class="btn primary" href="#journal">Read the Journal</a>
+              <a class="btn ghost" href="#sustain">Sustainability</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panelImg" role="img" aria-label="Studio/nature image"></div>
+        </div>
+      </div>
     </section>
 
-    <section id="now" style="margin-top:18px;">
-      <h2 style="margin:0 0 8px;">Now</h2>
-      <p style="margin:0; color:var(--muted);">
-        Add 3–5 bullet points here later (projects, goals, travel plans, learning, etc.).
-      </p>
+    <!-- SUSTAINABILITY -->
+    <section class="section" id="sustain">
+      <div class="sectionHead">
+        <h2>Consciously Made</h2>
+        <p>High standards, low noise—our approach to quality, sourcing, and waste.</p>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <strong>Natural Materials</strong>
+          <span>Prioritizing fibers and ingredients with a lighter footprint.</span>
+        </div>
+        <div class="pillar">
+          <strong>Small Batch</strong>
+          <span>Made in limited runs to avoid overproduction.</span>
+        </div>
+        <div class="pillar">
+          <strong>Plastic-Lite</strong>
+          <span>Minimal packaging, recyclable where possible.</span>
+        </div>
+        <div class="pillar">
+          <strong>Give Back</strong>
+          <span>Seasonal donations to local land & community efforts.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section" id="contact">
+      <div class="panel newsletter">
+        <div>
+          <div class="kicker">Notes from the Studio</div>
+          <h3 class="storyTitle" style="margin:10px 0 8px;">Early access, restocks, and new releases.</h3>
+          <p class="storyText" style="margin:0;">A calm monthly email—no spam, just the good stuff.</p>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <label for="email" class="sr-only" style="position:absolute; left:-9999px;">Email address</label>
+          <input id="email" name="email" type="email" placeholder="Email address" required />
+          <button class="submit" type="submit">Join</button>
+        </form>
+      </div>
+      <p class="tiny">Tip: When you add a real store platform later, connect this form to your email list provider (Mailchimp/Klaviyo/etc.).</p>
     </section>
 
     <footer>
-      <div>© <span id="y"></span> Lori April</div>
-      <div>Built on GitHub Pages</div>
+      <div class="foot">
+        <div>
+          <h4>Lori April</h4>
+          <div class="tiny">Modern-classic handcrafted goods for conscious homes.</div>
+          <div class="tiny" style="margin-top:10px;">© <span id="y"></span> Lori April Hand Crafted Goods</div>
+        </div>
+
+        <div>
+          <h4>Shop</h4>
+          <a href="#shop">All Products</a>
+          <a href="#collection-home">Home & Ritual</a>
+          <a href="#collection-carry">Carry</a>
+          <a href="#collection-gifts">Gifting</a>
+        </div>
+
+        <div>
+          <h4>Info</h4>
+          <a href="#about">Our Story</a>
+          <a href="#sustain">Sustainability</a>
+          <a href="#journal">Journal</a>
+          <a href="#policies">Shipping & Returns</a>
+        </div>
+      </div>
     </footer>
-  </div>
+  </main>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
