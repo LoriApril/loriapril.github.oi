@@ -3,39 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lori April Hand Crafted Goods</title>
-  <meta name="description" content="Modern-classic handcrafted goods—small-batch, nature-inspired, consciously made." />
+  <title>Lori & Her Crafts</title>
+  <meta name="description" content="A calm studio space for Lori’s crafts, art, and small moments of making." />
 
   <style>
     :root{
-      --bg: #fbfaf6;          /* warm bone */
+      --bg: #fbfaf6;
       --paper: #ffffff;
-      --ink: #1b1b16;         /* soft black */
-      --muted: #5f6458;       /* moss-gray */
-      --line: #e6e2d7;        /* sand line */
-      --accent: #3e5a3b;      /* evergreen */
-      --accent2:#a67c52;      /* clay */
+      --ink: #1b1b16;
+      --muted: #5f6458;
+      --line: #e6e2d7;
+      --accent: #3e5a3b;
+      --accent2:#a67c52;
       --shadow: 0 16px 50px rgba(27,27,22,.08);
       --radius: 18px;
       --radius2: 24px;
       --max: 1120px;
     }
-
     *{ box-sizing:border-box; }
-    html,body{ height:100%; }
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--ink);
       background:var(--bg);
       line-height:1.55;
-      letter-spacing: .01em;
+      letter-spacing:.01em;
     }
-
     a{ color:inherit; }
     .wrap{ max-width:var(--max); margin:0 auto; padding: 20px; }
 
-    /* Header */
     header{
       position: sticky;
       top:0;
@@ -67,7 +63,7 @@
     .brand span{
       color: var(--muted);
       font-size: 12px;
-      letter-spacing: .08em;
+      letter-spacing: .10em;
       text-transform: uppercase;
     }
     nav{
@@ -81,29 +77,11 @@
       color: var(--muted);
       font-weight: 650;
       font-size: 13px;
-      letter-spacing: .06em;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
     nav a:hover{ color: var(--ink); text-decoration: underline; text-underline-offset: 6px; }
-    .icons{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .iconbtn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:40px; height:40px;
-      border:1px solid var(--line);
-      border-radius: 999px;
-      background: var(--paper);
-      box-shadow: 0 8px 22px rgba(27,27,22,.06);
-      text-decoration:none;
-    }
-    .iconbtn:hover{ border-color: color-mix(in srgb, var(--accent) 25%, var(--line)); }
 
-    /* Buttons */
     .btnrow{ display:flex; gap:12px; flex-wrap:wrap; margin-top: 18px; }
     .btn{
       display:inline-flex;
@@ -126,10 +104,8 @@
       color: #fff;
       box-shadow: 0 18px 40px rgba(62,90,59,.22);
     }
-    .btn.primary:hover{ filter: brightness(.98); }
     .btn.ghost:hover{ border-color: color-mix(in srgb, var(--accent) 25%, var(--line)); }
 
-    /* Hero */
     .hero{
       margin-top: 18px;
       border-radius: var(--radius2);
@@ -137,7 +113,6 @@
       border:1px solid var(--line);
       background: var(--paper);
       box-shadow: var(--shadow);
-      position: relative;
     }
     .heroGrid{
       display:grid;
@@ -172,24 +147,7 @@
       margin: 10px 0 0;
       color: var(--muted);
       font-size: 16px;
-      max-width: 46ch;
-    }
-    .trust{
-      margin-top: 16px;
-      display:flex;
-      gap: 12px;
-      flex-wrap:wrap;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(251,250,246,.9);
+      max-width: 52ch;
     }
     .heroImage{
       position:relative;
@@ -199,21 +157,20 @@
       background-size: cover;
       background-position: center;
     }
-    .heroBadge{
+    .note{
       position:absolute;
       bottom: 18px;
       right: 18px;
       background: rgba(255,255,255,.88);
       border:1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 12px;
+      border-radius: 16px;
+      padding: 12px 12px;
       font-size: 12px;
       color: var(--muted);
       box-shadow: 0 12px 28px rgba(27,27,22,.10);
-      max-width: 260px;
+      max-width: 280px;
     }
 
-    /* Section */
     .section{ margin-top: 34px; }
     .sectionHead{
       display:flex;
@@ -232,11 +189,10 @@
       margin:0;
       color: var(--muted);
       font-size: 13px;
-      max-width: 56ch;
+      max-width: 60ch;
     }
 
-    /* Collections */
-    .cards{
+    .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
@@ -251,60 +207,19 @@
       transition: transform .14s ease, box-shadow .14s ease;
     }
     .card:hover{ transform: translateY(-2px); box-shadow: 0 18px 50px rgba(27,27,22,.10); }
-    .cardImg{
-      height: 180px;
+    .img{
+      height: 190px;
       background-size: cover;
       background-position: center;
       border-bottom:1px solid var(--line);
     }
-    .cardBody{ padding: 14px 14px 16px; }
-    .cardTitle{ font-weight: 820; margin:0; }
-    .cardDesc{ margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+    .body{ padding: 14px 14px 16px; }
+    .title{ font-weight: 820; margin:0; }
+    .desc{ margin: 6px 0 0; color: var(--muted); font-size: 13px; }
 
-    /* Products */
-    .products{
+    .mosaic{
       display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-    .product{
-      background: var(--paper);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      overflow:hidden;
-      text-decoration:none;
-      transition: transform .14s ease, box-shadow .14s ease;
-    }
-    .product:hover{ transform: translateY(-2px); box-shadow: 0 18px 50px rgba(27,27,22,.10); }
-    .prodImg{
-      height: 200px;
-      background-size: cover;
-      background-position: center;
-      border-bottom:1px solid var(--line);
-    }
-    .prodBody{ padding: 12px 12px 14px; }
-    .prodTop{ display:flex; justify-content:space-between; gap:10px; }
-    .prodName{ margin:0; font-weight: 820; font-size: 14px; }
-    .price{ font-weight: 820; color: var(--accent); font-size: 14px; }
-    .prodMeta{ margin: 6px 0 10px; color: var(--muted); font-size: 12px; }
-    .quickAdd{
-      width:100%;
-      border-radius: 999px;
-      border:1px solid var(--line);
-      padding: 10px 12px;
-      background: #fff;
-      font-weight: 780;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      font-size: 11px;
-      cursor:pointer;
-    }
-    .quickAdd:hover{ border-color: color-mix(in srgb, var(--accent) 25%, var(--line)); }
-
-    /* Story split */
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr .8fr;
       gap: 14px;
       align-items: stretch;
     }
@@ -315,7 +230,7 @@
       overflow:hidden;
       box-shadow: 0 10px 30px rgba(27,27,22,.06);
     }
-    .panelPad{ padding: 22px 20px; }
+    .pad{ padding: 20px 18px; }
     .kicker{
       color: var(--muted);
       letter-spacing: .14em;
@@ -323,18 +238,33 @@
       font-weight: 780;
       font-size: 12px;
     }
-    .storyTitle{ margin: 10px 0 10px; font-size: 28px; letter-spacing: -.02em; line-height: 1.1; }
-    .storyText{ margin:0; color: var(--muted); }
-    .panelImg{
-      background:
-        linear-gradient(0deg, rgba(27,27,22,.10), rgba(27,27,22,.10)),
-        url("https://images.unsplash.com/photo-1520975693411-b4c85d0f8311?auto=format&fit=crop&w=1600&q=70");
-      background-size: cover;
-      background-position: center;
-      min-height: 320px;
+    .big{
+      margin: 10px 0 10px;
+      font-size: 26px;
+      letter-spacing: -.02em;
+      line-height: 1.12;
     }
+    .text{ margin:0; color: var(--muted); }
 
-    /* Pillars */
+    .list{
+      display:grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .item{
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 12px 12px;
+      border:1px solid var(--line);
+      border-radius: 16px;
+      text-decoration:none;
+      background: #fff;
+    }
+    .item:hover{ border-color: color-mix(in srgb, var(--accent) 25%, var(--line)); }
+    .item strong{ font-size: 13px; }
+    .item span{ color: var(--muted); font-size: 12px; }
+
     .pillars{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
@@ -355,46 +285,6 @@
     }
     .pillar span{ color: var(--muted); font-size: 13px; }
 
-    /* Newsletter */
-    .newsletter{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      flex-wrap:wrap;
-      padding: 18px;
-    }
-    .form{
-      display:flex;
-      gap: 10px;
-      flex-wrap:wrap;
-      width: 100%;
-      max-width: 520px;
-    }
-    input{
-      flex: 1 1 220px;
-      padding: 12px 12px;
-      border-radius: 999px;
-      border:1px solid var(--line);
-      background: #fff;
-      font-size: 14px;
-      outline:none;
-    }
-    input:focus{ border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
-    .submit{
-      padding: 12px 16px;
-      border-radius: 999px;
-      border:1px solid var(--accent);
-      background: var(--accent);
-      color:#fff;
-      font-weight: 820;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      font-size: 12px;
-      cursor:pointer;
-    }
-
-    /* Footer */
     footer{
       margin-top: 42px;
       padding: 26px 0;
@@ -423,19 +313,17 @@
     .foot a:hover{ text-decoration: underline; }
     .tiny{ margin-top: 14px; font-size: 12px; color: var(--muted); }
 
-    /* Responsive */
     @media (max-width: 980px){
       .heroGrid{ grid-template-columns: 1fr; }
       .heroImage{ min-height: 280px; }
-      .cards{ grid-template-columns: 1fr; }
-      .products{ grid-template-columns: 1fr 1fr; }
-      .split{ grid-template-columns: 1fr; }
+      .grid3{ grid-template-columns: 1fr; }
+      .mosaic{ grid-template-columns: 1fr; }
       .pillars{ grid-template-columns: 1fr 1fr; }
       .foot{ grid-template-columns: 1fr; }
     }
     @media (max-width: 520px){
-      .products{ grid-template-columns: 1fr; }
       .heroCopy{ padding: 28px 18px; }
+      .pillars{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -444,23 +332,17 @@
   <header>
     <div class="topbar">
       <a class="brand" href="#">
-        <strong>Lori April</strong>
-        <span>Hand Crafted Goods</span>
+        <strong>Lori</strong>
+        <span>& Her Crafts</span>
       </a>
 
       <nav aria-label="Primary navigation">
-        <a href="#shop">Shop</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#notes">Notes</a>
         <a href="#about">About</a>
-        <a href="#sustain">Sustainability</a>
-        <a href="#journal">Journal</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <div class="icons" aria-label="Utility">
-        <a class="iconbtn" href="#search" title="Search" aria-label="Search">⌕</a>
-        <a class="iconbtn" href="#account" title="Account" aria-label="Account">⎋</a>
-        <a class="iconbtn" href="#cart" title="Cart" aria-label="Cart">👜</a>
-      </div>
     </div>
   </header>
 
@@ -469,218 +351,169 @@
     <section class="hero" aria-label="Featured">
       <div class="heroGrid">
         <div class="heroCopy">
-          <div class="eyebrow">Small-batch • Nature-inspired • Consciously made</div>
-          <h1>Quiet luxury, made by hand.</h1>
+          <div class="eyebrow">A studio space for making • collecting • sharing</div>
+          <h1>Where I keep my crafts.</h1>
           <p class="sub">
-            Lori April Hand Crafted Goods—modern-classic pieces for home, ritual, and gifting.
-            Thoughtfully sourced materials. Timeless forms. Minimal waste.
+            A simple home for whatever I’m creating—art, handmade pieces, experiments, and quiet little projects.
+            Come in, look around, stay as long as you like.
           </p>
 
           <div class="btnrow">
-            <a class="btn primary" href="#shop">Shop the Collection</a>
-            <a class="btn ghost" href="#about">Learn Our Process</a>
-          </div>
-
-          <div class="trust">
-            <div class="chip">✓ Natural materials</div>
-            <div class="chip">✓ Small-batch studio made</div>
-            <div class="chip">✓ Plastic-lite packaging</div>
+            <a class="btn primary" href="#work">View the Work</a>
+            <a class="btn ghost" href="#notes">Read the Notes</a>
           </div>
         </div>
 
-        <div class="heroImage" role="img" aria-label="Nature-inspired product styling photo">
-          <div class="heroBadge">
-            <strong style="color:var(--ink)">New:</strong>
-            Winter Studio Release — limited quantities, once they’re gone they’re gone.
+        <div class="heroImage" role="img" aria-label="Nature-inspired studio photo">
+          <div class="note">
+            <strong style="color:var(--ink)">Currently:</strong>
+            working on a small series inspired by natural textures and soft, earthy colors.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COLLECTIONS -->
-    <section class="section" id="shop">
+    <!-- FEATURED WORK -->
+    <section class="section" id="work">
       <div class="sectionHead">
-        <h2>Shop by Collection</h2>
-        <p>Start with what you’re drawn to—home essentials, everyday carry, or elevated gifting.</p>
+        <h2>Featured Pieces</h2>
+        <p>A rotating set of favorites—finished work, in-progress experiments, and anything I’m proud of lately.</p>
       </div>
 
-      <div class="cards">
-        <a class="card" href="#collection-home">
-          <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=70');"></div>
-          <div class="cardBody">
-            <p class="cardTitle">Home & Ritual</p>
-            <p class="cardDesc">Objects that soften the day—calm, grounded, essential.</p>
+      <div class="grid3">
+        <a class="card" href="#">
+          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="body">
+            <p class="title">Clay & Earth</p>
+            <p class="desc">Stone textures, imperfect edges, soft glazes.</p>
           </div>
         </a>
 
-        <a class="card" href="#collection-carry">
-          <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1520975599431-6d6a7d86c2f0?auto=format&fit=crop&w=1400&q=70');"></div>
-          <div class="cardBody">
-            <p class="cardTitle">Carry</p>
-            <p class="cardDesc">Minimal forms, durable materials, built for everyday.</p>
+        <a class="card" href="#">
+          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1520975599431-6d6a7d86c2f0?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="body">
+            <p class="title">Linen & Thread</p>
+            <p class="desc">Handmade textiles, small details, everyday comfort.</p>
           </div>
         </a>
 
-        <a class="card" href="#collection-gifts">
-          <div class="cardImg" style="background-image:url('https://images.unsplash.com/photo-1549465220-1a8d2c019b9a?auto=format&fit=crop&w=1400&q=70');"></div>
-          <div class="cardBody">
-            <p class="cardTitle">Gifting</p>
-            <p class="cardDesc">Considered bundles and heirloom-leaning keepsakes.</p>
+        <a class="card" href="#">
+          <div class="img" style="background-image:url('https://images.unsplash.com/photo-1549465220-1a8d2c019b9a?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="body">
+            <p class="title">Found & Reworked</p>
+            <p class="desc">Upcycled materials turned into something new.</p>
           </div>
         </a>
       </div>
     </section>
 
-    <!-- BESTSELLERS -->
-    <section class="section" aria-label="Bestsellers">
+    <!-- PROJECTS + NOTES -->
+    <section class="section" id="projects">
       <div class="sectionHead">
-        <h2>Bestsellers</h2>
-        <p>Customer favorites—simple silhouettes, premium feel, and made to last.</p>
+        <h2>Projects & Notes</h2>
+        <p>Short updates, what I’m learning, and tiny behind-the-scenes moments.</p>
       </div>
 
-      <div class="products">
-        <article class="product">
-          <div class="prodImg" style="background-image:url('https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1400&q=70');"></div>
-          <div class="prodBody">
-            <div class="prodTop">
-              <p class="prodName">Stoneware Pinch Bowl</p>
-              <div class="price">$34</div>
-            </div>
-            <div class="prodMeta">Hand-finished • Natural glaze</div>
-            <button class="quickAdd" type="button">Quick Add</button>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="prodImg" style="background-image:url('https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1400&q=70');"></div>
-          <div class="prodBody">
-            <div class="prodTop">
-              <p class="prodName">Linen Kitchen Towel Set</p>
-              <div class="price">$42</div>
-            </div>
-            <div class="prodMeta">OEKO-TEX linen • Soft wash</div>
-            <button class="quickAdd" type="button">Quick Add</button>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="prodImg" style="background-image:url('https://images.unsplash.com/photo-1520975682030-1a8d2c019b9a?auto=format&fit=crop&w=1400&q=70');"></div>
-          <div class="prodBody">
-            <div class="prodTop">
-              <p class="prodName">Canvas Everyday Tote</p>
-              <div class="price">$68</div>
-            </div>
-            <div class="prodMeta">Heavyweight canvas • Reinforced</div>
-            <button class="quickAdd" type="button">Quick Add</button>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="prodImg" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=70');"></div>
-          <div class="prodBody">
-            <div class="prodTop">
-              <p class="prodName">Botanical Soap Trio</p>
-              <div class="price">$28</div>
-            </div>
-            <div class="prodMeta">Plant oils • Lightly scented</div>
-            <button class="quickAdd" type="button">Quick Add</button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- STORY -->
-    <section class="section" id="about">
-      <div class="split">
+      <div class="mosaic">
         <div class="panel">
-          <div class="panelPad">
-            <div class="kicker">The Studio</div>
-            <h3 class="storyTitle">Crafted slowly, designed to stay.</h3>
-            <p class="storyText">
-              Each piece is made in small batches with a focus on restraint: fewer, better materials;
-              timeless shapes; and packaging that respects the planet. We create goods that feel
-              elevated but grounded—quiet luxury you can live with.
-            </p>
-            <div class="btnrow">
-              <a class="btn primary" href="#journal">Read the Journal</a>
-              <a class="btn ghost" href="#sustain">Sustainability</a>
+          <div class="pad">
+            <div class="kicker" id="notes">Recent Notes</div>
+            <div class="list">
+              <a class="item" href="#">
+                <div>
+                  <strong>On choosing a palette that feels like nature</strong><br />
+                  <span>3 min read</span>
+                </div>
+                <span>→</span>
+              </a>
+              <a class="item" href="#">
+                <div>
+                  <strong>My small-batch process (and why I like it)</strong><br />
+                  <span>4 min read</span>
+                </div>
+                <span>→</span>
+              </a>
+              <a class="item" href="#">
+                <div>
+                  <strong>Studio essentials I actually use</strong><br />
+                  <span>2 min read</span>
+                </div>
+                <span>→</span>
+              </a>
+            </div>
+
+            <div class="btnrow" style="margin-top:14px;">
+              <a class="btn primary" href="#">All Notes</a>
+              <a class="btn ghost" href="#">Start Here</a>
             </div>
           </div>
         </div>
 
-        <div class="panel">
-          <div class="panelImg" role="img" aria-label="Studio/nature image"></div>
+        <div class="panel" aria-label="Project image panel">
+          <div class="img" style="height:100%; min-height:340px; background-image:
+            linear-gradient(0deg, rgba(27,27,22,.10), rgba(27,27,22,.10)),
+            url('https://images.unsplash.com/photo-1520975693411-b4c85d0f8311?auto=format&fit=crop&w=1600&q=70');">
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SUSTAINABILITY -->
-    <section class="section" id="sustain">
+    <!-- VALUES -->
+    <section class="section">
       <div class="sectionHead">
-        <h2>Consciously Made</h2>
-        <p>High standards, low noise—our approach to quality, sourcing, and waste.</p>
+        <h2>What I Like Making</h2>
+        <p>Not rules—just a few things I come back to when I’m creating.</p>
       </div>
 
       <div class="pillars">
-        <div class="pillar">
-          <strong>Natural Materials</strong>
-          <span>Prioritizing fibers and ingredients with a lighter footprint.</span>
-        </div>
-        <div class="pillar">
-          <strong>Small Batch</strong>
-          <span>Made in limited runs to avoid overproduction.</span>
-        </div>
-        <div class="pillar">
-          <strong>Plastic-Lite</strong>
-          <span>Minimal packaging, recyclable where possible.</span>
-        </div>
-        <div class="pillar">
-          <strong>Give Back</strong>
-          <span>Seasonal donations to local land & community efforts.</span>
-        </div>
+        <div class="pillar"><strong>Natural Textures</strong><span>Linen, clay, wood, paper, stone.</span></div>
+        <div class="pillar"><strong>Quiet Color</strong><span>Earthy tones, soft contrast, calm neutrals.</span></div>
+        <div class="pillar"><strong>Slow Process</strong><span>Small batches, thoughtful steps, less waste.</span></div>
+        <div class="pillar"><strong>Useful Beauty</strong><span>Pieces that can live with you, not just sit.</span></div>
       </div>
     </section>
 
-    <!-- NEWSLETTER -->
-    <section class="section" id="contact">
-      <div class="panel newsletter">
-        <div>
-          <div class="kicker">Notes from the Studio</div>
-          <h3 class="storyTitle" style="margin:10px 0 8px;">Early access, restocks, and new releases.</h3>
-          <p class="storyText" style="margin:0;">A calm monthly email—no spam, just the good stuff.</p>
-        </div>
+    <!-- ABOUT / CONTACT -->
+    <section class="section" id="about">
+      <div class="panel">
+        <div class="pad">
+          <div class="kicker">About</div>
+          <h3 class="big">Hi, I’m Lori.</h3>
+          <p class="text">
+            This is my personal studio space—part gallery, part notebook. I share what I’m making, what I’m learning,
+            and whatever feels worth documenting. If you’d like to say hello, the best way is email.
+          </p>
 
-        <form class="form" action="#" method="post">
-          <label for="email" class="sr-only" style="position:absolute; left:-9999px;">Email address</label>
-          <input id="email" name="email" type="email" placeholder="Email address" required />
-          <button class="submit" type="submit">Join</button>
-        </form>
+          <div class="btnrow" id="contact">
+            <a class="btn primary" href="mailto:you@example.com">Email Me</a>
+            <a class="btn ghost" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+
+          <p class="tiny">Replace the email + Instagram link with yours (or remove them if you prefer privacy).</p>
+        </div>
       </div>
-      <p class="tiny">Tip: When you add a real store platform later, connect this form to your email list provider (Mailchimp/Klaviyo/etc.).</p>
     </section>
 
     <footer>
       <div class="foot">
         <div>
-          <h4>Lori April</h4>
-          <div class="tiny">Modern-classic handcrafted goods for conscious homes.</div>
-          <div class="tiny" style="margin-top:10px;">© <span id="y"></span> Lori April Hand Crafted Goods</div>
+          <h4>Lori & Her Crafts</h4>
+          <div class="tiny">A calm place for handmade work and little creative experiments.</div>
+          <div class="tiny" style="margin-top:10px;">© <span id="y"></span> Lori</div>
         </div>
 
         <div>
-          <h4>Shop</h4>
-          <a href="#shop">All Products</a>
-          <a href="#collection-home">Home & Ritual</a>
-          <a href="#collection-carry">Carry</a>
-          <a href="#collection-gifts">Gifting</a>
+          <h4>Explore</h4>
+          <a href="#work">Featured Pieces</a>
+          <a href="#projects">Projects</a>
+          <a href="#notes">Notes</a>
+          <a href="#about">About</a>
         </div>
 
         <div>
-          <h4>Info</h4>
-          <a href="#about">Our Story</a>
-          <a href="#sustain">Sustainability</a>
-          <a href="#journal">Journal</a>
-          <a href="#policies">Shipping & Returns</a>
+          <h4>Contact</h4>
+          <a href="mailto:you@example.com">Email</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
     </footer>
