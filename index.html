@@ -1,13 +1,220 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>My Site</title>
-  </head>
-  <body style="font-family: system-ui; max-width: 720px; margin: 40px auto; padding: 0 16px;">
-    <h1>Hello — I’m Be-Yotch</h1>
-    <p>Welcome to my new website.</p>
-    <p>Email me: <a href="mailto:you@example.com">you@example.com</a></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lori April</title>
+  <meta name="description" content="Personal website of Lori April." />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --card: #f9fafb;
+      --border: #e5e7eb;
+      --link: #111827;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 20px 80px;
+    }
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 14px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    nav a:hover { color: var(--text); text-decoration: underline; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 18px;
+      align-items: start;
+      margin: 22px 0 26px;
+    }
+    .hero h1 {
+      font-size: 44px;
+      line-height: 1.1;
+      margin: 0 0 12px;
+      letter-spacing: -0.03em;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .tile {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .tile:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+    }
+    .tile h3 { margin: 0 0 8px; font-size: 16px; }
+    .tile p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .links {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: var(--link);
+      font-weight: 650;
+      font-size: 14px;
+      background: #fff;
+    }
+    .pill:hover { text-decoration: underline; }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 780px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      header { align-items: center; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Lori April</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#now">Now</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Hi — I’m Lori.</h1>
+        <p>
+          Welcome to my corner of the internet. I’m building this site as a simple home for my work,
+          notes, and the things I’m exploring.
+        </p>
+
+        <div class="links" id="contact" style="margin-top:16px;">
+          <a class="pill" href="mailto:loriapril01@yahoo.com">Email me</a>
+          <a class="pill" href="https://www.instagram.com/loriaprilthunberg/" target="_blank" rel="noopener">Instagram</a>
+      
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Quick note</h2>
+        <p>
+          This site is brand new. I’ll be adding pages over time — starting simple and making it better as I go.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <a class="tile" href="#about">
+        <h3>About</h3>
+        <p>A short intro and what I’m about.</p>
+      </a>
+      <a class="tile" href="#now">
+        <h3>Now</h3>
+        <p>What I’m focused on lately.</p>
+      </a>
+      <a class="tile" href="#contact">
+        <h3>Contact</h3>
+        <p>Best ways to reach me.</p>
+      </a>
+    </section>
+
+    <section id="about" style="margin-top:28px;">
+      <h2 style="margin:0 0 8px;">About</h2>
+      <p style="margin:0; color:var(--muted);">
+        Replace this with a couple sentences about you — what you do, what you love, and what you want this site to become.
+      </p>
+    </section>
+
+    <section id="now" style="margin-top:18px;">
+      <h2 style="margin:0 0 8px;">Now</h2>
+      <p style="margin:0; color:var(--muted);">
+        Add 3–5 bullet points here later (projects, goals, travel plans, learning, etc.).
+      </p>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Lori April</div>
+      <div>Built on GitHub Pages</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
