@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lori & Her Crafts — Blog</title>
+  <title>Lori April Creations — Blog</title>
   <meta name="description" content="Studio notes, project updates, and process snapshots." />
 
   <style>
@@ -167,22 +167,60 @@
       .post{ grid-template-columns: 1fr; }
       .thumb{ min-height: 180px; }
     }
+    .header-center{
+  max-width: var(--max);
+  margin: 0 auto;
+padding: 36px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-center nav{
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header-center nav a{
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.header-center nav a:hover{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: var(--ink);
+}
+@media (max-width: 600px){
+  .header-center img{
+    height: 100px !important;
+  }
+
   </style>
 </head>
 
 <body>
   <header>
-    <div class="topbar">
-      <a class="brand" href="index.html">
-  <img src="images/logo.png" alt="Lori April logo" style="height:150px;">
-/a>
-      <nav aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html" aria-current="page">Blog</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
+  <div class="header-center">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png"
+           alt="Lori April logo"
+           style="height:150px; width:auto;">
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
   </header>
 
   <main>
