@@ -1,1 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lori April Creations — Travels</title>
+  <meta name="description" content="Travel stories and photo journals from Lori April Creations." />
+
+  <style>
+    :root{
+      --bg:#fafafa;
+      --card:#ffffff;
+      --text:#111;
+      --muted:#666;
+      --line:#eaeaea;
+      --radius:16px;
+      --max:1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Centered logo + nav below */
+    header{
+      position: sticky;
+      top: 0;
+      background: rgba(250,250,250,0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+    .header-center{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 18px 14px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: 10px;
+    }
+    .brand{ text-decoration:none; color:inherit; }
+    .brand img{ height:150px; width:auto; display:block; }
+
+    nav{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    nav a{
+      text-decoration:none;
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 8px;
+      border-radius: 10px;
+    }
+    nav a:hover{ background:#f1f1f1; color: var(--text); }
+
+    @media (max-width: 600px){
+      .brand img{ height:100px; }
+    }
+
+    main{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 18px 50px;
+    }
+
+    .hero{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-top: 18px;
+    }
+    h1{
+      margin: 0;
+      font-size: clamp(24px, 3vw, 36px);
+      letter-spacing: -0.02em;
+    }
+    .sub{
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    /* 3 across, 3 rows to start */
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .tile{
+      display:block;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      text-decoration:none;
+      color: inherit;
+      transition: transform 140ms ease, box-shadow 140ms ease;
+    }
+    .tile:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .thumb{
+      width:100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display:block;
+      transition: transform 140ms ease;
+    }
+    .tile:hover .thumb{ transform: scale(1.02); }
+
+    .cap{
+      padding: 10px 12px 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .cap strong{
+      display:block;
+      color: var(--text);
+      margin-bottom: 2px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    footer{
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-center">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Lori April Creations logo">
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="travels.html" aria-current="page">Travels</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Travels</h1>
+      <p class="sub">
+        Click any trip to read the full story. Replace each image with your own travel photos
+        (example: <code>images/travels/paris.jpg</code>).
+      </p>
+    </section>
+
+    <!-- 3 x 3 starter grid (9 trips) -->
+    <section class="grid" aria-label="Travel grid">
+      <a class="tile" href="travels/paris.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1400&q=70" alt="Paris">
+        <div class="cap"><strong>Paris</strong>A weekend of cafés, museums, and wandering.</div>
+      </a>
+
+      <a class="tile" href="travels/rome.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=1400&q=70" alt="Rome">
+        <div class="cap"><strong>Rome</strong>Sunlit streets, gelato stops, and ruins.</div>
+      </a>
+
+      <a class="tile" href="travels/tokyo.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&w=1400&q=70" alt="Tokyo">
+        <div class="cap"><strong>Tokyo</strong>Night lights, cozy shops, and temples.</div>
+      </a>
+
+      <a class="tile" href="travels/reykjavik.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1500043357865-c6b8827edf7a?auto=format&fit=crop&w=1400&q=70" alt="Reykjavík">
+        <div class="cap"><strong>Reykjavík</strong>Cold air, warm coffee, big skies.</div>
+      </a>
+
+      <a class="tile" href="travels/mexico-city.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1585468274952-66591eb14165?auto=format&fit=crop&w=1400&q=70" alt="Mexico City">
+        <div class="cap"><strong>Mexico City</strong>Markets, murals, and amazing food.</div>
+      </a>
+
+      <a class="tile" href="travels/london.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1400&q=70" alt="London">
+        <div class="cap"><strong>London</strong>Rainy walks and bookshop afternoons.</div>
+      </a>
+
+      <a class="tile" href="travels/san-diego.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1520962685600-8b857c9627d6?auto=format&fit=crop&w=1400&q=70" alt="San Diego">
+        <div class="cap"><strong>San Diego</strong>Beach hours and golden sunsets.</div>
+      </a>
+
+      <a class="tile" href="travels/vancouver.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1509817316-1c8e68f37704?auto=format&fit=crop&w=1400&q=70" alt="Vancouver">
+        <div class="cap"><strong>Vancouver</strong>Mountains, seawall strolls, cozy eats.</div>
+      </a>
+
+      <a class="tile" href="travels/new-york.html">
+        <img class="thumb" src="https://images.unsplash.com/photo-1546436836-07a91091f160?auto=format&fit=crop&w=1400&q=70" alt="New York">
+        <div class="cap"><strong>New York</strong>Busy streets and quiet moments.</div>
+      </a>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Lori April Creations
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
