@@ -149,21 +149,58 @@
       padding-top: 18px;
       border-top: 1px solid var(--line);
     }
+    .header-center{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 36px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-center nav{
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header-center nav a{
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;  
+  text-transform: uppercase;
+}
+
+.header-center nav a:hover{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: var(--ink);
+}
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="topbar">
-      <a class="brand" href="index.html">Lori &amp; Her Crafts</a>
-      <nav aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="gallery.html" aria-current="page">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+ <header>
+  <div class="header-center">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png"
+           alt="Lori April logo"
+           style="height:150px; width:auto;">
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
 
   <main>
     <section class="hero">
